@@ -1,3 +1,15 @@
+html {
+    animation: gradient 5s ease infinite;
+    background-size: 200% 200%;
+    background-image: linear-gradient(45deg, #ff3c00, #ffffff, #005b7c, #00ffc3);
+}
+
+@keyframes gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -6,7 +18,6 @@ body {
     flex-direction: column;
     width: 100vw;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: grey;
     color: aliceblue;
 }
 
@@ -87,7 +98,6 @@ h1 {
     margin: 4px 8px;
     width: 44px;
     height: 44px;
-    /* mix-blend-mode: lighten; */
 }
 
 .tile-share-button svg {
