@@ -1,19 +1,49 @@
-const shareButtons = document.querySelectorAll('.tile-share-button');
-console.log(shareButtons)
+// const shareButtons = document.querySelectorAll('.tile-share-button');
+// console.log(shareButtons)
 
-async function copyText(e) {
-    // Prevent default action
-    e.preventDefault();
+// async function copyText(e) {
+//     // Prevent default action
+//     e.preventDefault();
     
-    // Find the closest parent <a> tag
-    const linkElement = e.target.closest('a');
+//     // Find the closest parent <a> tag
+//     const linkElement = e.target.closest('a');
     
-    // Get the href attribute from the parent <a> tag
-    const link = linkElement ? linkElement.getAttribute('href') : '';
-    try {
-        await navigator.clipboard.writeText(link);
-        alert("Copied the text: " + link);
-    } catch (err) {
-        console.error(err);
-    }
-}
+//     // Get the href attribute from the parent <a> tag
+//     const link = linkElement ? linkElement.getAttribute('href') : '';
+//     try {
+//         await navigator.clipboard.writeText(link);
+//         alert("Copied the text: " + link);
+//     } catch (err) {
+//         console.error(err);
+//     }
+// }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Find all elements with the class 'tile-share-button'
+    const shareButtons = document.querySelectorAll('.tile-share-button');
+
+    // Add event listener to each button
+    shareButtons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            // Prevent the default action (if any)
+            event.preventDefault();
+
+            // Get the parent element with the class 'tile'
+            const tileElement = this.parentElement;
+
+            // Extract the href attribute value
+            const hrefValue = tileElement.getAttribute('href');
+
+            // Copy the href value to clipboard
+            navigator.clipboard.writeText(hrefValue).then(function() {
+                console.log('Copying to clipboard was successful!');
+                // Display a success message after copying
+                alert('Link copied successfully! Check your clipboard.');
+            }).catch(function(err) {
+                console.error('Could not copy text: ', err);
+                // Display an error message if copying failed
+                alert('Failed to copy link. Please try again.');
+            });
+        });
+    });
+});
