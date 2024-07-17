@@ -1,7 +1,20 @@
+@font-face {
+    font-family: 'op-caska';
+    src: url('/Assets/Fonts/Operator-caska-Italic.ttf');
+    /* font-weight: normal;
+    font-style: normal; */
+}
+@font-face {
+    font-family: 'jetbrains';
+    src: url('/Assets/Fonts/JetBrainsMonoNerdFontMono-Regular.ttf');
+    /* font-weight: normal;
+    font-style: normal; */
+}
+
 html {
     animation: gradient 5s ease infinite;
     background-size: 200% 200%;
-    background-image: linear-gradient(45deg, #ff3c00, #ffffff, #005b7c, #00ffc3);
+    background-image: linear-gradient(45deg, #191724, #c4a7e7, #3e8fb0, #ea9d34);
 }
 
 @keyframes gradient {
@@ -17,8 +30,9 @@ body {
     align-items: center;
     flex-direction: column;
     width: 100vw;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: jetbrains, Verdana, Geneva, Tahoma, sans-serif;
     color: aliceblue;
+    
 }
 
 header {
@@ -69,6 +83,7 @@ h1 {
 .tile:hover {
     transition: cubic-bezier(.07 , 1.41 , .82 , 1.41 );
     transform: scale(1.02);
+    font-family: op-caska, Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
