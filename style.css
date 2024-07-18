@@ -73,18 +73,19 @@ h1 {
 .tile {
     width: 100%;
     height: 56px;
-    background-color: rgb(37,37,37);
-    margin: 7px;
+    background-color: rgba(37,37,37,.5);
+    margin: 10px;
     border-radius: 17px;
     display: flex;
     justify-content: space-between;
+    mix-blend-mode:luminosity;
 }
 
 .tile:hover {
     transition: cubic-bezier(.07 , 1.41 , .82 , 1.41 );
     transform: scale(1.02);
     font-family: op-caska, Verdana, Geneva, Tahoma, sans-serif;
-
+    filter: drop-shadow(5px 5px 10px grey);
 }
 
 .image-container {

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add event listener to each button
     shareButtons.forEach(function(button) {
         button.addEventListener('click', function(event) {
-            // Prevent the default action (if any)
+            // Prevent the defagitult action (if any)
             event.preventDefault();
 
             // Get the parent element with the class 'tile'
