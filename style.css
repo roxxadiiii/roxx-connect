@@ -82,7 +82,7 @@ h1 {
 
 .tile:hover {
     transition: cubic-bezier(.07 , 1.41 , .82 , 1.41 );
-    transform: scale(1.02);
+    transform: scale(1.05);
     font-family: op-caska, Verdana, Geneva, Tahoma, sans-serif;
 
 }
@@ -107,6 +107,7 @@ h1 {
 
 .icon img {
     width: 44px;
+    
 }
 
 .icon {
